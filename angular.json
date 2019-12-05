@@ -37,6 +37,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "baseHref": "https://bogatom.github.io/Timely-Frontend/",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
