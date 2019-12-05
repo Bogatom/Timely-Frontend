@@ -21,8 +21,8 @@ cache:
     - node_modules
 
 script:
-  - ng lint
-  - ng test --watch=false
+  # - ng lint
+  # - ng test --watch=false
   - ng build --prod
   - cd ./dist/timely
   - cp index.html 404.html
