@@ -1,0 +1,38 @@
+.fill-remaining-space {
+   flex: 1 1 auto;
+}
+
+.brand-timely{
+   margin-left: 0.3em;
+}
+
+.T{
+   color:	#fff;
+   font-size: 25px;
+   text-shadow: 2px 2px #000;
+}
+.I{
+   color:		#fff;
+   font-size: 25px;
+   text-shadow: 2px 2px #000;
+}
+.M{
+   font-size: 25px;
+   color:	#fff;   
+   text-shadow: 2px 2px #000;
+}
+.E{
+   font-size: 25px;
+   color:#fff;  
+   text-shadow: 2px 2px #000;
+}
+.L{
+   font-size: 25px;
+   color:	#fff;  
+   text-shadow: 2px 2px #000;
+}
+.Y{
+   font-size: 25px;
+   color:	#fff;   
+   text-shadow: 2px 2px #000;
+}
