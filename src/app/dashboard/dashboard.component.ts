@@ -20,6 +20,7 @@ export class DashboardComponent implements OnInit {
   clockedTime: string;
   loading = false;
   error = '';
+  clockedIn = false;
 
   constructor(private authenticationService: AuthenticationService, private clockingService: ClockingService, private router: Router) {}
 
