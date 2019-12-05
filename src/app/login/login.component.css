@@ -8,7 +8,7 @@ html, body {
     justify-content: center;
     align-items: flex-start;
     padding-top: 100px;
-    background-image: url("/assets/Images/pattern.png");
+    background-image: url("pattern.png");
   }
 
 button.mat-raised-button.mat-primary.mat-button.mat-button-base {
