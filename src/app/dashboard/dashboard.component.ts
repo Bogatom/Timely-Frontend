@@ -20,13 +20,19 @@ export class DashboardComponent implements OnInit {
   clockedTime: string;
   loading = false;
   error = '';
-  clockedIn = false;
+  clockedIn: boolean;
 
   constructor(private authenticationService: AuthenticationService, private clockingService: ClockingService, private router: Router) {}
 
   ngOnInit() {
     this.username = sessionStorage.getItem('username');
     this.dateTime = new Date().toUTCString();
+    this.clockingService.getStatus(this.username).pipe().subscribe(
+      data => {
+        console.log(data);
+        this.clockedIn = data;
+        return data;
+      });
   }
 
   logout() {
