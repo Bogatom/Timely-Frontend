@@ -4,6 +4,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { APP_BASE_HREF } from '@angular/common';
 
 
 describe('AppComponent', () => {
@@ -18,8 +19,11 @@ describe('AppComponent', () => {
         AppComponent
       ],
       providers: [
-                CookieService
-      ]
+          {
+            provide: APP_BASE_HREF, useValue: '/'
+          },
+          CookieService
+        ]
     }).compileComponents();
   }));
 

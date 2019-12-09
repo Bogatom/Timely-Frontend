@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AccountComponent } from './account/account.component';
 import { AuthenticationInterceptor } from './services/AuthenticationInterceptor';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,11 @@ import { AuthenticationInterceptor } from './services/AuthenticationInterceptor'
       useClass: AuthenticationInterceptor,
       multi   : true,
    },
+   {
+     provide: APP_BASE_HREF,
+     useValue : '/'
+   },
+
    CookieService, AccessGuard],
   bootstrap: [AppComponent]
 })

@@ -7,7 +7,7 @@ import { AccountComponent } from './account.component';
 import { MaterialModule } from '../material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
+import { CommonModule, APP_BASE_HREF } from '@angular/common';
 
 describe('AccountComponent', () => {
   let component: AccountComponent;
@@ -28,6 +28,9 @@ describe('AccountComponent', () => {
         AccountComponent
       ],
       providers: [
+        {
+          provide: APP_BASE_HREF, useValue: '/'
+        },
         CookieService
       ]
     })
@@ -40,7 +43,7 @@ describe('AccountComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  fit('should create', () => {
     expect(component).toBeTruthy();
   });
 });
