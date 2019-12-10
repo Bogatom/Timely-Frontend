@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
 
   username: string;
   dateTime: string;
-  clockedTime: string;
+  startTime: string;
   loading = false;
   error = '';
   clockedIn: boolean;
@@ -30,7 +30,12 @@ export class DashboardComponent implements OnInit {
     this.clockingService.getStatus(this.username).pipe().subscribe(
       data => {
         console.log(data);
-        this.clockedIn = data;
+        if (data.start_time != null) {
+          this.clockedIn = true;
+          this.startTime = data.start_time;
+        } else {
+          this.clockedIn = false;
+        }
         return data;
       });
   }
