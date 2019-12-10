@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
 import { ClockingService } from './clocking.service';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('ClockingService', () => {
   beforeEach(() => TestBed.configureTestingModule({
     imports: [
-      HttpClientModule
+      HttpClientTestingModule
     ],
     declarations: [
 

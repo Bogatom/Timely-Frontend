@@ -1,7 +1,7 @@
 import { CookieService } from 'ngx-cookie-service';
 import { AccountComponent } from './../account/account.component';
 import { LoginComponent } from './../login/login.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { DashboardComponent } from './dashboard.component';
@@ -19,7 +19,7 @@ describe('DashboardComponent', () => {
         AppRoutingModule,
         MaterialModule,
         ReactiveFormsModule,
-        HttpClientModule
+        HttpClientTestingModule
       ],
       declarations: [
         LoginComponent,

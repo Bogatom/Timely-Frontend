@@ -6,7 +6,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AccountComponent } from './account.component';
 import { MaterialModule } from '../material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { CommonModule, APP_BASE_HREF } from '@angular/common';
 
 describe('AccountComponent', () => {
@@ -20,7 +20,7 @@ describe('AccountComponent', () => {
         AppRoutingModule,
         MaterialModule,
         ReactiveFormsModule,
-        HttpClientModule
+        HttpClientTestingModule
       ],
       declarations: [
         LoginComponent,

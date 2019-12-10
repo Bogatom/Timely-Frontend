@@ -5,7 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { LoginComponent } from './login.component';
 import { MaterialModule } from '../material/material.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -16,7 +16,7 @@ describe('LoginComponent', () => {
       imports: [
         MaterialModule,
         ReactiveFormsModule,
-        HttpClientModule,
+        HttpClientTestingModule,
         RouterTestingModule
       ],
       declarations: [

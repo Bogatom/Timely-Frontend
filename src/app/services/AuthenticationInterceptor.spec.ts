@@ -1,13 +1,13 @@
 import { AuthenticationInterceptor } from './AuthenticationInterceptor';
 import { CookieService } from 'ngx-cookie-service';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 
 
 describe('BasicAuthHttpInterceptorService', () => {
   beforeEach(() => TestBed.configureTestingModule({
     imports: [
-      HttpClientModule
+      HttpClientTestingModule
     ],
     declarations: [
 
