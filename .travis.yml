@@ -22,7 +22,7 @@ cache:
 
 script:
   # - ng lint
-  - ng test --watch=false
+  - npm install && npm rebuild && npm test --watch=false
   - ng build --prod
   - cd ./dist/timely
   - cp index.html 404.html
