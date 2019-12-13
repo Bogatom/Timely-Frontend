@@ -54,7 +54,7 @@ export class DashboardComponent implements OnInit {
     this.authenticationService.logOut();
   }
 
-  clockOut() {
+  async clockOut() {
     this.clockingService.clockOut(this.username).pipe(first())
      .subscribe(
          data => {
@@ -67,7 +67,7 @@ export class DashboardComponent implements OnInit {
          });
   }
 
-  clockIn() {
+  async clockIn() {
      this.clockingService.clockIn(this.username).pipe(first())
      .subscribe(
          data => {
