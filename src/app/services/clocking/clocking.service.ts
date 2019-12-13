@@ -12,6 +12,10 @@ export class ClockingService {
     return this.http.post<any>('http://localhost:8080/user/addStartTime', {username});
   }
 
+  clockOut(username: string) {
+    return this.http.post<any>('http://localhost:8080/user/addEndTime', {username});
+  }
+
   getStatus(username: string) {
     return this.http.get<any>('http://localhost:8080/user/getClockingStatus/' + username);
   }
