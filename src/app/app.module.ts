@@ -21,7 +21,7 @@ import { HourComponent } from './hour/hour.component';
       DashboardComponent,
       AccountComponent,
       HourComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,3 +1,4 @@
+import { HourComponent } from './../hour/hour.component';
 import { CookieService } from 'ngx-cookie-service';
 import { AccountComponent } from './../account/account.component';
 import { LoginComponent } from './../login/login.component';
@@ -24,7 +25,8 @@ describe('DashboardComponent', () => {
       declarations: [
         LoginComponent,
         DashboardComponent,
-        AccountComponent
+        AccountComponent,
+        HourComponent
       ],
       providers: [
         {provide: APP_BASE_HREF, useValue: '/'},

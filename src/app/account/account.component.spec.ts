@@ -1,3 +1,4 @@
+import { HourComponent } from './../hour/hour.component';
 import { CookieService } from 'ngx-cookie-service';
 import { DashboardComponent } from './../dashboard/dashboard.component';
 import { LoginComponent } from './../login/login.component';
@@ -20,12 +21,12 @@ describe('AccountComponent', () => {
         AppRoutingModule,
         MaterialModule,
         ReactiveFormsModule,
-        HttpClientTestingModule
-      ],
+        HttpClientTestingModule      ],
       declarations: [
         LoginComponent,
         DashboardComponent,
-        AccountComponent
+        AccountComponent,
+        HourComponent
       ],
       providers: [
         {
