@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { Component, OnInit, Injectable } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { AuthenticationService } from '../services/authentication/authentication.service';
 import { ClockingService } from '../services/clocking/clocking.service';

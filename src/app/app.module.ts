@@ -12,13 +12,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AccountComponent } from './account/account.component';
 import { AuthenticationInterceptor } from './services/AuthenticationInterceptor';
 import { APP_BASE_HREF } from '@angular/common';
+import { HourComponent } from './hour/hour.component';
 
 @NgModule({
   declarations: [
       AppComponent,
       LoginComponent,
       DashboardComponent,
-      AccountComponent
+      AccountComponent,
+      HourComponent
   ],
   imports: [
     BrowserModule,

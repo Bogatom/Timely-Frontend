@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
-import { FlexLayoutModule } from "@angular/flex-layout";
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { 
-  MatToolbarModule, 
-  MatSidenavModule, 
-  MatListModule, 
-  MatIconModule, 
-  MatButtonModule, 
-  MatCardModule, 
-  MatFormFieldModule, 
-  MatInputModule
+import {
+  MatToolbarModule,
+  MatSidenavModule,
+  MatListModule,
+  MatIconModule,
+  MatButtonModule,
+  MatCardModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatTableModule
 } from '@angular/material';
 
 const MaterialComponents = [
@@ -25,10 +26,11 @@ const MaterialComponents = [
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-]
+    MatTableModule
+];
 
 @NgModule({
-  imports: [MaterialComponents], 
+  imports: [MaterialComponents],
   exports: [MaterialComponents]
 })
 
