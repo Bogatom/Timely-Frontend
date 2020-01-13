@@ -14,13 +14,18 @@ export class AccountComponent implements OnInit {
 
   username: string;
   user: User;
+  isAdmin: boolean;
 
   ngOnInit(): void {
     this.username = sessionStorage.getItem('username');
     this.userService.getUserDetails(this.username).pipe()
     .subscribe(
         data => {
-          console.log(data);
+          if (data.roles == 'ADMIN') {
+            this.isAdmin = true;
+          } else {
+            this.isAdmin = false;
+          }
           this.user = data;
           return data;
         }

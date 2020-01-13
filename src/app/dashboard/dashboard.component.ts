@@ -1,3 +1,4 @@
+import { UserService } from './../services/user/user.service';
 import { Router } from '@angular/router';
 import { Component, OnInit} from '@angular/core';
 import { DatePipe } from '@angular/common';
@@ -22,29 +23,50 @@ export class DashboardComponent implements OnInit {
   loading = false;
   error = '';
   clockedIn: boolean;
+  isAdmin: boolean;
 
-  constructor(private authenticationService: AuthenticationService, private clockingService: ClockingService, private router: Router) {}
+  constructor(
+    private authenticationService: AuthenticationService,
+    private userService: UserService,
+    private clockingService: ClockingService,
+    private router: Router ) {}
 
   ngOnInit() {
     this.clockedIn = false;
     this.username = sessionStorage.getItem('username');
     this.dateTime = new Date().toLocaleString();
+    this.userService.getUserDetails(this.username).pipe()
+    .subscribe(
+        data => {
+          if (data.roles == 'ADMIN') {
+            this.isAdmin = true;
+          } else {
+            this.isAdmin = false;
+          }
+          console.log(data);
+          return data;
+        }
+    );
     this.clockingService.getStatus(this.username).pipe().subscribe(
       data => {
         console.log(data);
 
         if (data.start_time == null && data.end_time == null) {
+          this.isAdmin = data.admin;
           return this.clockedIn = false;
         }
 
         if (data.start_time == null) {
+          this.isAdmin = data.admin;
           return this.clockedIn = true;
         }
 
         if (data.end_time == null) {
           this.clockedIn = true;
+          this.isAdmin = data.admin;
           return this.startTime = data.start_time;
         } else {
+          this.isAdmin = data.admin;
           return this.clockedIn = false;
         }
       });
